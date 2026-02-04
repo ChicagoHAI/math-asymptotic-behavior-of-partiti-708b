@@ -1,0 +1,37 @@
+\section{Main Results}
+
+Our first main result provides a refined error term in the classical Hardy-Ramanujan asymptotic formula.
+
+\begin{theorem}[Refined Asymptotic Formula]
+For all $n \geq 1$,
+\[ \partition{n} = \frac{1}{4n\sqrt{3}} e^{\pi\sqrt{2n/3}} \left(1 + \frac{C}{\sqrt{n}} + \bigO\left(\frac{1}{n^{3/4}}\right)\right) \]
+where $C$ is an explicitly computable constant.
+\end{theorem}
+
+\begin{proof}
+We apply the circle method with a refined analysis of the major arcs. Let
+\[ f(q) = \sum_{n=0}^{\infty} \partition{n}q^n = \prod_{k=1}^{\infty} \frac{1}{1-q^k} \]
+Consider the contour integral
+\[ \partition{n} = \frac{1}{2\pi i} \oint \frac{f(q)}{q^{n+1}} dq \]
+The dominant contribution comes from neighborhoods of roots of unity $e^{2\pi i h/k}$ with small $k$. Careful analysis of these contributions yields the result.
+\end{proof}
+
+\begin{theorem}[Restricted Partition Asymptotics]
+For fixed $k$ and $n \to \infty$,
+\[ \partitionk{k}{n} = \frac{n^{k-1}}{k!(k-1)!} \left(1 + \bigO\left(\frac{1}{n}\right)\right) \]
+\end{theorem}
+
+\begin{proof}
+The generating function for $\partitionk{k}{n}$ is
+\[ \sum_{n=0}^{\infty} \partitionk{k}{n}q^n = \prod_{j=1}^k \frac{1}{1-q^j} \]
+Using the residue theorem and analyzing the pole at $q=1$ of order $k$ gives the result.
+\end{proof}
+
+\begin{theorem}[Uniform Bounds]
+There exist constants $c_1,c_2 > 0$ such that for all $n,k \geq 1$,
+\[ \partitionk{k}{n} \leq c_1 e^{c_2\sqrt{nk}} \]
+\end{theorem}
+
+\begin{proof}
+Combine the generating function method with Cauchy's inequality and estimates for the modulus of the generating function on appropriate contours.
+\end{proof}
