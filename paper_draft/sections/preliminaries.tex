@@ -1,0 +1,19 @@
+\section{Preliminaries}
+
+\begin{definition}
+The partition function $\partition{n}$ is defined as the number of ways to write $n$ as a sum of positive integers, where the order of summands does not matter.
+\end{definition}
+
+\begin{example}
+For $n=4$, we have $\partition{4}=5$, corresponding to the partitions:
+\[ 4 = 3+1 = 2+2 = 2+1+1 = 1+1+1+1 \]
+\end{example}
+
+\begin{definition}
+For $k \geq 1$, the restricted partition function $\partitionk{k}{n}$ counts the number of partitions of $n$ where each part is at most $k$.
+\end{definition}
+
+The generating function for $\partition{n}$ is given by:
+\[ \sum_{n=0}^{\infty} \partition{n}q^n = \prod_{k=1}^{\infty} \frac{1}{1-q^k} \]
+
+This infinite product exhibits modular properties that are crucial for our analysis.
